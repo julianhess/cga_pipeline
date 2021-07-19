@@ -167,7 +167,7 @@ if __name__ == "__main__":
 			except subprocess.CalledProcessError:
 				pass
 			subprocess.check_call(
-			  "gcloud compute images create {imagename} --source-snapshot={host}-snap --family {image_family}-$USER-$UID".format(imagename = imagename, host = host, image_family = args.image_family),
+			  "gcloud compute images create {imagename} --source-snapshot={host}-snap --family {image_family}-$USER".format(imagename = imagename, host = host, image_family = args.image_family),
 			  shell = True
 			)
 		finally:
